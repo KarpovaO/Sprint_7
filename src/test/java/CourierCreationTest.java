@@ -11,9 +11,9 @@ import static org.apache.http.HttpStatus.SC_CREATED;
 import static org.hamcrest.Matchers.equalTo;
 
 public class CourierCreationTest extends CourierBaseTest {
-    private final String LOGIN = "ninja"+ LocalDateTime.now();
-    private final String PASSWORD = "1234"+ LocalDateTime.now();
-    private final String FIRSTNAME = "ninja"+ LocalDateTime.now() + "name";
+    private static final String LOGIN = "ninja"+ LocalDateTime.now();
+    private static final String PASSWORD = "1234"+ LocalDateTime.now();
+    private static final String FIRSTNAME = "ninja"+ LocalDateTime.now() + "name";
     @Test
     @DisplayName("Создание курьера") // имя теста
     @Description("Данные генерируется с использованием даты")

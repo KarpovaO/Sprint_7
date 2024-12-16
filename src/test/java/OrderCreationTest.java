@@ -21,18 +21,18 @@ public class OrderCreationTest extends BaseTest {
     }
     @Parameterized.Parameters
     public static Object[][] data() {
-        Object[][] OO = new Object[ORDERS.length][1];
+        Object[][] objects = new Object[ORDERS.length][1];
         int counter = 0;
         for (Order o : ORDERS) {
-            OO[counter][0] = o;
+            objects[counter][0] = o;
             counter++;
         }
-        return OO;
+        return objects;
     }
     @Test
     @DisplayName("Создание валидных заказа")
     @Description("Данные лежат в массиве Orders, проверяются разные цвета")
     public void createOrder() {
-        createOrderApi(order).then().assertThat().statusCode(SC_CREATED).body("track", notNullValue());;
+        createOrderApi(order).then().assertThat().statusCode(SC_CREATED).body("track", notNullValue());
     }
 }
